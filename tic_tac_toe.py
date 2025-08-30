@@ -1,7 +1,5 @@
 win_state = False
 playing_field = list(range(1, 10))
-print(type(playing_field))
-print(type(playing_field[1]))
 counter = 0
 all_win_coords = (
     (0, 1, 2),
@@ -26,11 +24,11 @@ while not win_state:
     valid = False
 
     while not valid:
-        position = int(input(f"Куда хотите поставить {player}?")) #выбераем куда сходить
+        position = int(input(f"Куда хотите поставить {player}?"))
 
         if playing_field[position - 1] not in ["x", "0"]:
             valid = True
-            playing_field[position - 1] = player  # заменяем выбронае число на х либо 0
+            playing_field[position - 1] = player
         else:
             print("клетка уже занятка!")
 
@@ -38,7 +36,7 @@ while not win_state:
 
     if counter >= 3:
         for coords in all_win_coords:
-            a, b, c = coords # нужно для распаковки картежа
+            a, b, c = coords
             if playing_field[a] == playing_field[b] == playing_field[c]:
                 print(f"Поздравляем, победил игрок {player}. Игра окончена!")
                 win_state = True
