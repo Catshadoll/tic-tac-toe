@@ -36,8 +36,8 @@ while not win_state:
 
     if counter >= 3:
         for coords in all_win_coords:
-            a, b, c = coords
-            if playing_field[a] == playing_field[b] == playing_field[c]:
+            one_win_coord, two_win_coord, three_win_coord = coords
+            if playing_field[one_win_coord] == playing_field[two_win_coord] == playing_field[three_win_coord]:
                 print(f"Поздравляем, победил игрок {player}. Игра окончена!")
                 win_state = True
                 break
