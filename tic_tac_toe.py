@@ -26,7 +26,7 @@ while not win_state:
     while not valid:
         position = int(input(f"Куда хотите поставить {player}?"))
 
-        if playing_field[position - 1] not in ["x", "0"]:
+        if playing_field[position - 1] not in ["X", "0"]:
             valid = True
             playing_field[position - 1] = player
         else:
